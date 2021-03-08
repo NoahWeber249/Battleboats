@@ -1,41 +1,22 @@
 public class Boat {
-    // can be horizontal (h) or vertical (v)
-    public char orientation;
-    public int size;
-    public boolean status = true;
+    private boolean orientation;
+    private final int size;
 
-    public Boat(char orientation, int size){
-        
+    public Boat(int size){
+        this.size = size;
+    }
+    // ACCESSOR METHODS
+    public void setOrientation(){
+        //sets orientation to random boolean, vertical if true, horizontal if false
+        this.orientation = Math.random() < 0.5;
     }
 
-    //  m is height, n is width
-    public void boatCreation(Board gameBoard){
-        Boat[] boats;
-        // 1
-        if (gameBoard.m == 3 || gameBoard.n ==3){
-            Boat[0] = new Boat()
-        }
-        // 2
-        else if((gameBoard.n ==4) || gameBoard.m ==4){
+    public boolean getOrientation(){
+        return this.orientation;
+    }
 
-        }
-        // 3
-        else if((4 < gameBoard.n && gameBoard.n <= 6) || (4 < gameBoard.m && gameBoard.m <=6)){
-
-        }
-        // 4
-        else if((6 < gameBoard.n && gameBoard.n <= 8) || (6 < gameBoard.m && gameBoard.m <=8)){
-
-        }
-        // 5
-        else if((8 < gameBoard.n && gameBoard.n <= 10) || (8 < gameBoard.m && gameBoard.m <=10)){
-
-        }
-
-
-
-
-
-        }
+    public int getSize(){
+        return this.size;
+    }
 
 }
